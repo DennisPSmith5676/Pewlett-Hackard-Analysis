@@ -53,13 +53,12 @@ CREATE TABLE dept_emp (
 
 -- Create the titles table
 CREATE TABLE titles (
-     title_id VARCHAR(40) NOT NULL,
+     emp_no INT NOT NULL, 
      title VARCHAR(40) NOT NULL,
 	 from_date DATE NOT NULL,
      to_date DATE NOT NULL,
-	 emp_no INT NOT NULL,
-     PRIMARY KEY (title_id, title, from_date)
-     
+	 FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
+     PRIMARY KEY (emp_no, title, from_date) 
 );
 
 -- Check the table
@@ -142,7 +141,7 @@ SELECT retirement_info.emp_no,
 	retirement_info.last_name,
     dept_emp.to_date
 	FROM retirement_info
-	LEFT JOIN dept_emp
+	INNER JOIN dept_emp
 	ON retirement_info.emp_no = dept_emp.emp_no;
 
 -- use alais for tables from above
@@ -151,7 +150,7 @@ SELECT ri.emp_no,
 	ri.last_name,
     de.to_date
 	FROM retirement_info as ri
-	LEFT JOIN dept_emp as de
+	INNER JOIN dept_emp as de
 	ON ri.emp_no = de.emp_no;
 	
 -- Join the dept and Dept manager tables
@@ -170,7 +169,7 @@ SELECT ri.emp_no,
 	de.to_date	
 	INTO current_emp
 	FROM retirement_info as ri
-	LEFT JOIN dept_emp as de
+	INNER JOIN dept_emp as de
 	ON ri.emp_no = de.emp_no
 	WHERE de.to_date = ('9999-01-01');
 	
@@ -180,7 +179,7 @@ SELECT * FROM current_emp;
 -- Employee count by department number
 SELECT COUNT(ce.emp_no), de.dept_no
 FROM current_emp as ce
-LEFT JOIN dept_emp as de
+INNER JOIN dept_emp as de
 ON ce.emp_no = de.emp_no
 GROUP BY de.dept_no;
 
@@ -188,7 +187,7 @@ GROUP BY de.dept_no;
 SELECT COUNT(ce.emp_no), de.dept_no
 INTO current_emp2
 FROM current_emp as ce
-LEFT JOIN dept_emp as de
+INNER JOIN dept_emp as de
 ON ce.emp_no = de.emp_no
 GROUP BY de.dept_no
 ORDER BY de.dept_no;
