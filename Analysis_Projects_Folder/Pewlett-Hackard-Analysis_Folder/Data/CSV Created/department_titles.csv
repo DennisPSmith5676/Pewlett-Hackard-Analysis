@@ -1,0 +1,39 @@
+count,title,dept_no,dept_name
+4200,Senior Staff,d001,Marketing
+1847,Staff,d001,Marketing
+3696,Senior Staff,d002,Finance
+1562,Staff,d002,Finance
+3744,Senior Staff,d003,Human Resources
+1695,Staff,d003,Human Resources
+746,Assistant Engineer,d004,Production
+6111,Engineer,d004,Production
+12767,Senior Engineer,d004,Production
+437,Senior Staff,d004,Production
+154,Staff,d004,Production
+1984,Technique Leader,d004,Production
+889,Assistant Engineer,d005,Development
+7187,Engineer,d005,Development
+14730,Senior Engineer,d005,Development
+376,Senior Staff,d005,Development
+194,Staff,d005,Development
+2252,Technique Leader,d005,Development
+230,Assistant Engineer,d006,Quality Management
+1752,Engineer,d006,Quality Management
+3603,Senior Engineer,d006,Quality Management
+551,Technique Leader,d006,Quality Management
+1,Manager,d007,Sales
+10929,Senior Staff,d007,Sales
+4769,Staff,d007,Sales
+32,Assistant Engineer,d008,Research
+376,Engineer,d008,Research
+1,Manager,d008,Research
+759,Senior Engineer,d008,Research
+3635,Senior Staff,d008,Research
+1521,Staff,d008,Research
+112,Technique Leader,d008,Research
+34,Assistant Engineer,d009,Customer Service
+296,Engineer,d009,Customer Service
+611,Senior Engineer,d009,Customer Service
+4265,Senior Staff,d009,Customer Service
+1866,Staff,d009,Customer Service
+77,Technique Leader,d009,Customer Service

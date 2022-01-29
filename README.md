@@ -23,8 +23,8 @@ Think about it like a phone number. You have your own number. It's your number, 
 When you save your friend's number in your phone, you're creating a reference to that person, also known as a foreign key. Your phone has lots of foreign keys (such as parents, doctors offices, friends, and other family), but only one primary key.
 Likewise, when your friend saves your number in their phone, your number is now a foreign key in their phone. Saving these keys connects the devices. They show the relationship between your phone and your friend's phone.
 
-Compare our first two CSVs again by looking at the following image.
- 
+ ![Table2](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\erd.png)
+
 In this example, dept_no shows up in both datasets; as an identifier (or primary key) in one and as a reference (or foreign key) in the other. This demonstrates the link between employees and which department they work in. We could continue to look for connections between the datasets, or we could create a roadmap of the content. Our roadmap would serve as a quick reference diagramming the different datasets and their interconnections. Additionally, it could be used as a reference guide later, when we begin to create queries to access all of the data.
 ## Table Structure
 When working in Excel and Visual Basic for Applications (VBA), we're working directly with worksheets with data. In SQL, the same worksheets we have been exploring are organized into tables instead. They are similar to DataFrames in that they have headers and indexes, with data in columns and rows. Take a look at the following images.
@@ -68,8 +68,8 @@ Using the ERD you created as a reference and your knowledge of SQL queries, crea
 6.	The Retiring Titles table is exported as retiring_titles.csv
 Results with detail analysis:
 1.	A query is written and executed to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955.
-Image with SQL, pgAdmin & QuickDBD Code below.
-Code and Image
+![Table1](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retirement_titles.png)
+
 -- Follow the instructions below to complete Deliverable 1.
 SELECT e.emp_no,
        e.first_name,
@@ -86,11 +86,12 @@ order by e.emp_no;
  
 2.	The Retirement Titles table is exported as retirement_titles.csv
 Exported retirement_titles.csv Image below.
-Code and Image
+
+
+![Table3](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retirement_titles.png)
  
 3.	*A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
-Image with SQL, pgAdmin & QuickDBD Code below.
-Code and Image
+![Table4](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\unique_titles.png)
 -- Use Dictinct with Orderby to remove duplicate rows
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name,
@@ -102,11 +103,10 @@ ORDER BY emp_no, title DESC;
  
 4.	The Unique Titles table is exported as unique_titles.csv
 Exported unique_titles.csv Image below.
-Code and Image
+![Table5](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\unique_titles.png)
  
 5.	A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
-Image with SQL, pgAdmin & QuickDBD Code below.
-Code and Image
+![Table6](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retiring_titles.png)
 -- Retrieve the number of employees by their most recent job title who are about to retire.
 SELECT COUNT(ut.emp_no),
 ut.title
@@ -117,11 +117,13 @@ ORDER BY COUNT(title) DESC;
  
 6.	The Retiring Titles table is exported as retiring_titles.csv
 Exported retiring_titles.csv Image below.
-Code and Image
+![Table7](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retiring_titles.png)
  
 # Deliverable 2: The Employees Eligible for the Mentorship Program
 Deliverable Requirements:
 Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
+![Table2](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\erd.png)
+
 - A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 - The Mentorship Eligibility table is exported and saved as mentorship_eligibilty.csv
 ## Results with detail analysis:
@@ -130,29 +132,31 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
  
 - The Mentorship Eligibility table is exported and saved as 
 - mentorship_eligibilty.csv"
-- Exported retiring_titles.csv 
-
+![Table8](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\mentorship_eligibility.png)
 # Deliverable 3: A written report on the employee database analysis
 The analysis should contain the following:
-1.	Overview of the analysis
-- Explain the purpose of this analysis.:
+1.	Overview of the analysis: Explain the purpose of this analysis.
 - In this deliverable, Bobby was tasked to determine the number of retiring employees per title, and identify employees who are eligible to participate in a mentorship program. Then, you’ll write a report that summarizes your analysis and helps prepare Bobby’s manager for the “silver tsunami” as many current employees reach retirement age.
-- 	Provide a bulleted list with four major points from the two analysis deliverables. 
+2. Results: Provide a bulleted list with four major points from the two analysis deliverables. 
 
-- From the finding of the eligible retirees, High Percentage of the workforce could retire at any given time.
-- From the job titles of the eligible retirees, the breakdown is below.
-- 32,452 Staff
-- 29,415 Senior Engineer
-- 14,221 Engineer
-- 8,047 Senior Staff
-- 4,502 Technique Leader
-- 1,761 Assistant Engineer
+- 1. From the finding of the eligible retirees, High Percentage of the workforce could retire at any given time.
+- 2. From the job titles of the eligible retirees, the breakdown is below.
+        - 13,608 Staff
+        - 32,470 Senior Engineer
+        - 15,722 Engineer
+        - 31,282 Senior Staff
+        - 4,876 Technique Leader
+        - 1,931 Assistant Engineer
+        - 2 Manager
 
-## Summary
-•	Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami.":
-1) How many roles will need to be filled as the "silver tsunami" begins to make an impact?.
-90,398 roles are in urgent need to be filled out as soon as the workforce starts retiring at any given time.
-2) Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-No, we have 1,940 employees who are eligible to participate in a mentorship program.
- 
+- 3. The develpoment, Production and Sales departments will be hit hardest. See the table below:
+![Table8](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\dept_titles.png)
 
+- 4. The Manager and assitant engineer roles will have the least impact overall based on title. See the table above
+
+
+3. Summary: Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami.":
+- How many roles will need to be filled as the "silver tsunami" begins to make an impact?.
+90,991 roles are in urgent need to be filled out as soon as the workforce starts retiring at any given time.
+- Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+No, we have 1,549 employees who are eligible to participate in a mentorship program.
