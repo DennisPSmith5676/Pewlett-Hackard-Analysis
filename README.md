@@ -68,7 +68,8 @@ Using the ERD you created as a reference and your knowledge of SQL queries, crea
 6.	The Retiring Titles table is exported as retiring_titles.csv
 Results with detail analysis:
 1.	A query is written and executed to create a Retirement Titles table for employees who are born between January 1, 1952 and December 31, 1955.
-![Table1](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retirement_titles.png)
+
+![Table1](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/retirement_titles.png)
 
 -- Follow the instructions below to complete Deliverable 1.
 SELECT e.emp_no,
@@ -88,7 +89,7 @@ order by e.emp_no;
 Exported retirement_titles.csv Image below.
 
 
-![Table3](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retirement_titles.png)
+![Table3](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/retirement_titles.png)
  
 3.	*A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
 ![Table4](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\unique_titles.png)
@@ -122,7 +123,8 @@ Exported retiring_titles.csv Image below.
 # Deliverable 2: The Employees Eligible for the Mentorship Program
 Deliverable Requirements:
 Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
-![Table2](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\erd.png)
+
+![Table2](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/erd.png)
 
 - A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 - The Mentorship Eligibility table is exported and saved as mentorship_eligibilty.csv
@@ -132,7 +134,9 @@ Using the ERD you created in this module as a reference and your knowledge of SQ
  
 - The Mentorship Eligibility table is exported and saved as 
 - mentorship_eligibilty.csv"
-![Table8](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\mentorship_eligibility.png)
+
+![Table8](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/mentorship_eligibility.png)
+
 # Deliverable 3: A written report on the employee database analysis
 The analysis should contain the following:
 1.	Overview of the analysis: Explain the purpose of this analysis.
@@ -150,7 +154,8 @@ The analysis should contain the following:
         - 2 Manager
 
 - 3. The develpoment, Production and Sales departments will be hit hardest. See the table below:
-![Table8](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\dept_titles.png)
+
+![Table8](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/dept_titles.png)
 
 - 4. The Manager and assitant engineer roles will have the least impact overall based on title. See the table above
 
