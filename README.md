@@ -23,7 +23,7 @@ Think about it like a phone number. You have your own number. It's your number, 
 When you save your friend's number in your phone, you're creating a reference to that person, also known as a foreign key. Your phone has lots of foreign keys (such as parents, doctors offices, friends, and other family), but only one primary key.
 Likewise, when your friend saves your number in their phone, your number is now a foreign key in their phone. Saving these keys connects the devices. They show the relationship between your phone and your friend's phone.
 
- ![Table2](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\erd.png)
+ ![Table2](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/erd.png)
 
 In this example, dept_no shows up in both datasets; as an identifier (or primary key) in one and as a reference (or foreign key) in the other. This demonstrates the link between employees and which department they work in. We could continue to look for connections between the datasets, or we could create a roadmap of the content. Our roadmap would serve as a quick reference diagramming the different datasets and their interconnections. Additionally, it could be used as a reference guide later, when we begin to create queries to access all of the data.
 ## Table Structure
