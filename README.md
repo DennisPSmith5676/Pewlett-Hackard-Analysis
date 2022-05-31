@@ -92,7 +92,9 @@ Exported retirement_titles.csv Image below.
 ![Table3](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/retirement_titles.png)
  
 3.	*A query is written and executed to create a Unique Titles table that contains the employee number, first and last name, and most recent title.
-![Table4](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\unique_titles.png)
+
+![Table4](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/unique_titles.png)
+
 -- Use Dictinct with Orderby to remove duplicate rows
 SELECT DISTINCT ON (emp_no) emp_no,
 first_name,
@@ -104,10 +106,13 @@ ORDER BY emp_no, title DESC;
  
 4.	The Unique Titles table is exported as unique_titles.csv
 Exported unique_titles.csv Image below.
-![Table5](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\unique_titles.png)
+
+![Table5](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/unique_titles.png)
  
 5.	A query is written and executed to create a Retiring Titles table that contains the number of titles filled by employees who are retiring.
-![Table6](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retiring_titles.png)
+
+![Table6](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/retiring_titles.png)
+
 -- Retrieve the number of employees by their most recent job title who are about to retire.
 SELECT COUNT(ut.emp_no),
 ut.title
