@@ -123,14 +123,12 @@ ORDER BY COUNT(title) DESC;
  
 6.	The Retiring Titles table is exported as retiring_titles.csv
 Exported retiring_titles.csv Image below.
-![Table7](Analysis_Projects_Folder\Pewlett-Hackard-Analysis_Folder\Images\retiring_titles.png)
+
+![Table7](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/retiring_titles.png)
  
 # Deliverable 2: The Employees Eligible for the Mentorship Program
 Deliverable Requirements:
 Using the ERD you created in this module as a reference and your knowledge of SQL queries, create a mentorship-eligibility table that holds the current employees who were born between January 1, 1965 and December 31, 1965.
-
-![Table2](/Analysis_Projects_Folder/Pewlett-Hackard-Analysis_Folder/Images/erd.png)
-
 - A query is written and executed to create a Mentorship Eligibility table for current employees who were born between January 1, 1965 and December 31, 1965.
 - The Mentorship Eligibility table is exported and saved as mentorship_eligibilty.csv
 ## Results with detail analysis:
